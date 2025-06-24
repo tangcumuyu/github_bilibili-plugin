@@ -1,0 +1,19 @@
+{
+  "name": "B站收藏夹插件",
+  "version": "0.0.0.1",
+  "manifest_version": 3,
+  "description": "Microsoft Edge _ B站广告屏蔽",
+  "icons": {
+    "16": "icons/logo16.png",
+    "32": "icons/logo16.png",
+    "48": "icons/logo16.png"
+  },
+  "permissions": ["cookies", "activeTab", "scripting", "nativeMessaging"],
+  "content_scripts": [
+    {
+      "matches": ["https://space.bilibili.com/*/favlist*"],
+      "js": ["favlist.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
