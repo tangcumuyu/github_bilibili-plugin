@@ -1,0 +1,117 @@
+<!-- 保持原有的HTML结构 -->
+<div class="container">
+  <header>
+    <h1><i class="fas fa-mouse-pointer"></i> 元素信息提取器</h1>
+    <p class="tagline">点击页面上的任意元素获取其详细信息</p>
+    <div class="controls">
+      <button id="toggleBtn" class="btn">
+        <i class="fas fa-play"></i> 启用元素选择
+      </button>
+      <button id="clearBtn" class="btn off">
+        <i class="fas fa-trash"></i> 清除信息
+      </button>
+      <button id="closeBtn" class="btn off">
+        <i class="fas fa-times"></i> 关闭窗口
+      </button>
+    </div>
+  </header>
+
+  <main class="info-container">
+    <div id="emptyState" class="empty-state">
+      <i class="fas fa-mouse"></i>
+      <h3>没有选择元素</h3>
+      <p>点击"启用元素选择"按钮，然后在页面上点击任意元素</p>
+    </div>
+
+    <div id="elementInfo" style="display: none">
+      <div class="info-section">
+        <div class="info-header">
+          <i class="fas fa-info-circle"></i>
+          <h2>元素概览</h2>
+        </div>
+        <div class="info-grid">
+          <div class="info-item">
+            <span class="info-label">标签名</span>
+            <span id="tagName" class="info-value">div</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">ID</span>
+            <span id="elementId" class="info-value">header</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">类名</span>
+            <span id="className" class="info-value">main-header</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">文本内容</span>
+            <span id="textContent" class="info-value">欢迎访问我们的网站</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">编辑文本内容</span>
+            <textarea id="textContentInput" class="text-edit-input textContentInput"></textarea>
+            <div class="text-edit-btns">
+              <button class="save-btn" id="saveTextBtn">保存</button>
+              <button class="cancel-btn" id="cancelTextBtn">取消</button>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-label">元素xpath</span>
+            <span id="xpath" class="info-value">欢迎访问我们的网站</span>
+          </div>
+        </div>
+      </div>
+      <div class="info-section">
+        <div class="info-header">
+          <i class="fas fa-code"></i>
+          <h2>HTML 结构</h2>
+        </div>
+        <div class="element-preview" id="htmlPreview">
+          &lt;div id="header" class="main-header"&gt;
+          &lt;h1&gt;欢迎访问我们的网站&lt;/h1&gt; &lt;/div&gt;
+        </div>
+      </div>
+
+      <div class="info-section">
+        <div class="info-header">
+          <i class="fas fa-paint-brush"></i>
+          <h2>样式信息</h2>
+        </div>
+        <div class="info-content" id="computedStyles">
+          font-size: 16px; color: #333; background-color: #f0f0f0; padding: 20px;
+        </div>
+      </div>
+
+      <div class="info-section">
+        <div class="info-header">
+          <i class="fas fa-layer-group"></i>
+          <h2>位置信息</h2>
+        </div>
+        <div class="info-grid">
+          <div class="info-item">
+            <span class="info-label">宽度</span>
+            <span id="elementWidth" class="info-value">1200px</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">高度</span>
+            <span id="elementHeight" class="info-value">80px</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">X 坐标</span>
+            <span id="elementX" class="info-value">120px</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Y 坐标</span>
+            <span id="elementY" class="info-value">45px</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </main>
+</div>
+<footer>
+  <p>元素信息提取器 v1.0 &copy; 2023</p>
+</footer>
+</div>
